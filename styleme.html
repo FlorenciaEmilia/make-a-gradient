@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a gradient</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleme.css">
+</head>
+<body>
+    <h1>Make a gradient</h1>
+  
+    <div class='controlledInput'>
+        <div>
+            <label for="colorOne">Color One</label>
+            <input id="colorOne" type="color" name="colorOne" value="#eb4034">
+        </div>
+
+        <div>
+            <label for="colorTwo">Color Two</label>
+            <input id="colorTwo" type="color" name="colorTwo" value="#ad42f5">
+        </div>
+
+        <div>
+            <label for="degree">Degree Angle:</label>
+            <input id="degree" type="range" name="degree" min="0" max="360" value="135" data-sizing="deg">
+        </div>
+
+    </div>
+    
+    <div id='box'></div>
+
+    <div id='gradientInfo'>
+        <p id='gradientOutput'></p>
+    </div>
+   
+  
+
+
+    
+    <script src="styleme.js"></script>
+</body>
+</html>
