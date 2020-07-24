@@ -12,5 +12,5 @@ function handleUpdate(){
     document.getElementById("gradientOutput").innerHTML = `${backgrounnd}`
 }
 
-inputs.forEach(input=>input.addEventListener('change', handleUpdate))
-inputs.forEach(input=>input.addEventListener('change', handleUpdate))
+inputs.forEach(input=>input.addEventListener('input', handleUpdate))
+inputs.forEach(input=>input.addEventListener('input', handleUpdate))

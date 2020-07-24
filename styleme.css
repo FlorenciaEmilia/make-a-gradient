@@ -1,57 +1,69 @@
-:root{
-    --radius:1px;
-    --colorOne:rgb(235, 64, 52);
-    --colorTwo:rgb(173, 66, 245);
-    --mainColor:#2671eb;
-    --degree:135deg;
+:root {
+	--radius: 1px;
+	--colorOne: rgb(235, 64, 52);
+	--colorTwo: rgb(173, 66, 245);
+	--mainColor: #2671eb;
+	--degree: 135deg;
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	background-color: white;
 }
 
-html{
-    background-color: #d3dded;
-    font-family: 'Manrope', sans-serif;
-    width: 100vw;
-    color:var(--mainColor);
-}
-h1{
-    text-align: center;
-    font-family: 'Abril Fatface', cursive;
-    font-weight: 100;
-    font-size: 3em;    
+h1 {
+	text-align: center;
+	font-weight: 100;
+	font-size: 3em;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
-.controlledInput{
- text-align: center;
- width:100vw;
- padding: 3em 0em 3em 0em;
- display: flex;
- align-content: center;
- justify-content: space-around;
+.controlledInput {
+	text-align: center;
+	width: 100vw;
+	padding: 3em 0em 3em 0em;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
 }
 
-
-#box{
-    margin: auto;
-    width:50vw;
-    height:40vh;
-    background: linear-gradient(var(--degree), var(--colorOne) 0%, var(--colorTwo) 100%);
-    border-radius: 15px 50px;
+#box {
+	margin: auto;
+	width: 50vw;
+	height: 40vh;
+	background: linear-gradient(var(--degree), var(--colorOne) 0%, var(--colorTwo) 100%);
+	border-radius: 15px 50px;
+	border: 3px solid black;
+}
+#colorOne{
+	background-color: var(--colorOne);
+}
+#colorTwo{
+	background-color: var(--colorTwo);
+}
+input::-webkit-color-swatch {
+    border: none;
 }
 
-input[type='color'], input[type='range']{
-    border-radius: 5px;
-    background:var(--mainColor);
-    background-color:var(--mainColor);
-    cursor:pointer;
-    -webkit-appearance: none; 
-    outline: none;
+input[type='color'],
+input[type='range'] {
+	border-radius: 5px;
+	/* background: var(--mainColor); */
+	background-color: transparent;
+	border: 2px solid black;
+	padding:0;
+	margin: 0;
+	cursor: pointer;
+	-webkit-appearance: none;
+	outline: none;
 }
 
-input[type='range']{
-    height: 0.5em;
+input[type='range'] {
+	height: 0.5em;
 }
 
-#gradientOutput{
-    text-align: center;
+#gradientOutput {
+	text-align: center;
 }
-
-
