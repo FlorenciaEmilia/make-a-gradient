@@ -1,11 +1,26 @@
 const inputs = document.querySelectorAll('.controlledInput input');
 const backg = document.querySelector('#box');
 const range = document.querySelector('#degree');
-const gradientInfo = document.querySelector('#gradientOutput');
-// const initialStsate = document.querySelector('body');
-window.addEventListener('load', testingThings);
+// const gradientInfo = document.querySelector('#gradientOutput');
+let gradientInfo = document.getElementById('gradientOutput');
+const copyBtn = document.querySelector('#copyBtn');
 
-function testingThings() {
+window.addEventListener('load', gradientInformationFunc);
+copyBtn.addEventListener('click', copyFunc);
+
+function copyFunc() {
+	gradientInfo.select();
+	/*For mobile devices*/
+	gradientInfo.setSelectionRange(0, 99999);
+
+	/* Copy the text inside the text field */
+	document.execCommand('copy');
+
+	/* Add a text that says copied to clipboard */
+	console.log(copyText);
+}
+
+function gradientInformationFunc() {
 	const style = getComputedStyle(backg);
 	const backgrounnd = style.background.split(' ').slice(4, 13).join(' ');
 
@@ -17,7 +32,7 @@ function handleUpdate() {
 
 	document.documentElement.style.setProperty(`--${this.name}`, this.value + deg);
 
-	testingThings();
+	gradientInformationFunc();
 }
 
 inputs.forEach((input) => input.addEventListener('input', handleUpdate));

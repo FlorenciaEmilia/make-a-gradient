@@ -76,6 +76,7 @@ textarea {
 	width: 99.4%;
 	color: black;
 	background-color: white;
+	resize: none;
 }
 button {
 	margin-top: 3px;
@@ -89,6 +90,3 @@ button:hover {
 	color: white;
 	background: linear-gradient(var(--degree), var(--colorOne) 0%, var(--colorTwo) 100%);
 }
-/* #gradientOutput {
-	text-align: center;
-} */
