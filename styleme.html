@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleme.css">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACFqNoAyLC0AHqn4QDes6cAkKrUAPW1mgCmrMcAWKP0AOm0oQCbq84ATaL7AGOk7gBupucAva+6ALKtwQDTsa0Aqqqqqqqqqqp3d3d3d3d3d7u7u7u7u7u7zMzMzMzMzMwiIiIiIiIiIgAAAAAAAAAARERERERERESZmZmZmZmZmWZmZmZmZmZm7u7u7u7u7u7d3d3d3d3d3RERERERERER//////////8zMzMzMzMzM4iIiIiIiIiIVVVVVVVVVVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/d0d624b013.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>CSS Gradient</h1>
@@ -26,6 +27,7 @@
         <div>
             <label for="degree">Degree Angle:</label>
             <input id="degree" type="range" name="degree" min="0" max="360" value="135" data-sizing="deg">
+  
         </div>
 
     </div>
@@ -33,7 +35,8 @@
     <div id='box'></div>
 
     <div id='gradientInfo'>
-        <p id='gradientOutput'></p>
+        <textarea id='gradientOutput' disabled></textarea>
+        <button>Copy to clipboard <i class="far fa-copy"></i></button>
     </div>
    
   
