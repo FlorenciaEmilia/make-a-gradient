@@ -12,12 +12,13 @@ function copyFunc() {
 	gradientInfo.select();
 	/*For mobile devices*/
 	gradientInfo.setSelectionRange(0, 99999);
-
 	/* Copy the text inside the text field */
 	document.execCommand('copy');
-
 	/* Add a text that says copied to clipboard */
-	console.log(copyText);
+	copyBtn.innerHTML = 'Copied!';
+	setTimeout(() => {
+		copyBtn.innerHTML = 'Copy to clipboard <i class="far fa-copy"></i>';
+	}, 1000);
 }
 
 function gradientInformationFunc() {

@@ -10,6 +10,18 @@ body {
 	margin: 0;
 	font-family: 'Lato', sans-serif;
 	background-color: white;
+	box-sizing: border-box;
+	animation: fadeInAnimation ease 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 h1 {
@@ -22,11 +34,16 @@ h1 {
 
 .controlledInput {
 	text-align: center;
-	width: 100vw;
-	padding: 3em 0em 3em 0em;
+	width: 90%;
+	padding: 3em 1em 1em 0em;
 	display: flex;
 	align-content: center;
 	justify-content: space-around;
+	flex-flow: wrap;
+}
+
+.controlledInput div {
+	padding: 1em;
 }
 
 #box {
@@ -61,7 +78,7 @@ input[type='range'] {
 }
 
 input[type='range'] {
-	height: 0.5em;
+	height: 0.2em;
 }
 
 #gradientInfo {
@@ -73,20 +90,58 @@ input[type='range'] {
 }
 textarea {
 	text-align: center;
-	width: 99.4%;
+	margin: auto;
+	width: 100%;
 	color: black;
 	background-color: white;
 	resize: none;
+	border: none;
+	padding: 1em;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+textarea:hover,
+textarea:focus {
+	outline: none;
 }
 button {
-	margin-top: 3px;
+	margin: auto;
 	background-color: white;
 	border: 2px solid black;
 	color: black;
 	padding: 1em;
 	width: 100%;
+	position: relative;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition: color 1000ms;
+	transition: color 1000ms;
+}
+
+button::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(var(--degree), var(--colorOne) 0%, var(--colorTwo) 100%);
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+	-webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition: 200ms ease-out;
+	transition: 200ms ease-out;
 }
 button:hover {
 	color: white;
-	background: linear-gradient(var(--degree), var(--colorOne) 0%, var(--colorTwo) 100%);
+}
+button:hover::before {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
 }
