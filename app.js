@@ -1,7 +1,6 @@
 const inputs = document.querySelectorAll('.controlledInput input');
 const backg = document.querySelector('#box');
 const range = document.querySelector('#degree');
-// const gradientInfo = document.querySelector('#gradientOutput');
 let gradientInfo = document.getElementById('gradientOutput');
 const copyBtn = document.querySelector('#copyBtn');
 
